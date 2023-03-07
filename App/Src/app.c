@@ -1,9 +1,15 @@
 #include "app.h"
 
+#define LEDS 8
+#define PACKAGE_LEN LEDS * 3
+
+static uint8_t led_buf[PACKEGE_LEN] = {};
+
 void app()
 {
     uint8_t RGB[3] = {100, 100, 100};
-
+    struct led_strp led;
+    ws2812_init(&led, led_buf, LEDS, &htim1, TIM_CHANNEL_1, hdma_tim1_ch1);
     ws2812_set_LED(1, RGB);
 }
 
