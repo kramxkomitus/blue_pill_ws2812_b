@@ -1,6 +1,7 @@
 #include "main.h"
 #include "tim.h"
 #include "stdbool.h"
+#include "stm32f1xx_hal_dma.h"
 
 #define PACKEGE_LEN LEDS * 24
 
@@ -30,3 +31,5 @@ struct led_strp ws2812_init(
     TIM_HandleTypeDef *tim,
     uint32_t tim_chanel,
     DMA_HandleTypeDef *dma);
+
+void ws2812_CallBack(DMA_HandleTypeDef *_hdma);

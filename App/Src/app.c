@@ -9,8 +9,13 @@ void app()
 {
     uint8_t RGB[3] = {100, 100, 100};
     struct led_strp led;
-    ws2812_init(&led, led_buf, LEDS, &htim1, TIM_CHANNEL_1, hdma_tim1_ch1);
-    ws2812_set_LED(1, RGB);
+    ws2812_init(&led, led_buf, LEDS, &htim1, TIM_CHANNEL_1, &hdma_tim1_ch1);
+    // ws2812_set_LED(1, RGB);
+    while (1)
+    {
+        /* code */
+    }
+    
 }
 
 // // /*uint32_t answer = 0;
