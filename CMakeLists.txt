@@ -65,6 +65,7 @@ include_directories(
     ${INCLUDE_DIRS}
     # You can add your's dir with heders
     ${CMAKE_SOURCE_DIR}/App/Inc
+    ${CMAKE_SOURCE_DIR}/BSP/Inc
 )
  
 # parsing for definitions
@@ -90,6 +91,7 @@ file(GLOB SOURCES
     ${LINKER}
     # You can add your's sorce file
     "App/Src/*.*"
+    "BSP/Src/*.*"
 )
  
 # find lincker script
